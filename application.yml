@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: configserver
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/miguel-dev01/spring-cloud-microservices
+          username: miguel-dev01
+          #password: ${GITHUB_PASSWORD}
+          password: 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
+          default-label: main
+#        vault:
+#          host: vault-host
+#          port: 8200
+#          scheme: https
+#          backend: secret
+#          defaultKey: application
+#          profileSeparator: '/'
