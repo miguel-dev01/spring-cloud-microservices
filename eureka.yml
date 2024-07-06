@@ -5,13 +5,11 @@ eureka:
     instance:
         hostname: ${app.eureka-server}
         leaseRenewalIntervalInSeconds: 30
-    # El cliente de Eureka se registra en el servidor de Eureka.
     client:
         registerWithEureka: false
         fetchRegistry: false
         serviceUrl:
-        defaultZone: http://${app.eureka-server}:${app.eureka-port}/eureka/
-    # Configuración del servidor de Eureka.
+            defaultZone: http://${app.eureka-server}:${app.eureka-port}/eureka/
     server:
         waitTimeInMsWhenSyncEmpty: 0
         response-cache-update-interval-ms: 5000
