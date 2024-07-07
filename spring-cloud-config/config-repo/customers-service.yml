@@ -1,0 +1,12 @@
+app.message: Hello from customers-service
+server.port: 9000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${app.eureka-server}:${app.eureka-port}/eureka/
+    initialInstanceInfoReplicationIntervalSeconds: 5
+    registryFetchIntervalSeconds: 5
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 5
